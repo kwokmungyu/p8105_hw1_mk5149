@@ -12,3 +12,8 @@ library(tidyverse)
 library(moderndive)
 ```
 
+# Problem 1
+```{r}
+data("early_january_weather")
+```
+
