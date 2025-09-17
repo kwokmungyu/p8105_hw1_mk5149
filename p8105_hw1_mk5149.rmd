@@ -17,3 +17,14 @@ library(moderndive)
 data("early_january_weather")
 ```
 
+```{r}
+names(early_january_weather)   # variable names
+nrow(early_january_weather)    # number of rows
+ncol(early_january_weather)    # number of columns
+mean(early_january_weather$temp, na.rm = TRUE)   # mean temperature
+```
+
+
+
+
+
