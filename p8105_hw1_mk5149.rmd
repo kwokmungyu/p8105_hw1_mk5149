@@ -91,6 +91,12 @@ mean(pull(df, factor_vec))      # error, factors are not directly numeric
 ```
 We can see that, the mean of the numeric vector works as expected. The mean of the logical vector also works, because R treats TRUE as 1 and FALSE as 0. However, the mean of the character and factor variables does not work, because they are numeric. 
 
+Finally, we convert variables to numeric using as.numeric function.
+```{r}
+as.numeric(df$logical_vec)      # TRUE → 1, FALSE → 0
+as.numeric(df$character_vec)    # results in NA with a warning
+as.numeric(df$factor_vec)       # converts factor levels to 1, 2, 3
+```
 
 
 
