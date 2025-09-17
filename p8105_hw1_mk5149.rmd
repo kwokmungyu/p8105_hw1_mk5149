@@ -6,3 +6,9 @@ output: github_document
 ---
 
 This is the R markdown file for Homework 1, P8105 Data Science, created by Mungyu Kwok on September 16th 2025.
+
+```{r}
+library(tidyverse)
+library(moderndive)
+```
+
