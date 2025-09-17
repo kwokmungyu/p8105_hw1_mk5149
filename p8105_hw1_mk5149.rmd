@@ -7,17 +7,20 @@ output: github_document
 
 This is the R markdown file for Homework 1, P8105 Data Science, created by Mungyu Kwok on September 16th 2025.
 
+Firstly, we load any necessary library that we will use in this file.
 ```{r}
 library(tidyverse)
 library(moderndive)
 ```
 
 # Problem 1
+We start problem 1 by loading the data from the `early_january_weather`.
 ```{r}
 # Load the data
 data("early_january_weather")
 ```
 
+Next, we extract the essential information about the dataset: variable names, number of wors & columns, and compute the mean temperature.
 ```{r}
 # Get the information about the dataset
 names(early_january_weather)   # variable names
@@ -30,6 +33,7 @@ The `early_january_weather` dataset contains `r nrow(early_january_weather)` row
 Important variables include `origin`, `year`, `month`, `day`, `hour`, `temp`, `dewp`, `humid`, `wind_dir`, `wind_dir`, `wind_speed`, `wind_gust`, `precip`, `pressure`, `visib` and `time_hour`.  
 The mean temperature during this period was `r mean(early_january_weather$temp, na.rm = TRUE)` degrees Fahrenheit.
 
+Based on the information obtained, we compute a scatterplot (time versus temperature).
 ```{r}
 # Generate the scatter plot
 scatter_temp_time <- ggplot(early_january_weather, 
@@ -45,6 +49,15 @@ increased over the course of the two weeks, although fluctuations occurred withi
 each day. Higher humidity values (lighter blue points) appear more often during
 periods of higher temperature, especially in the second week of January.
 Overall, the plot suggests a warming trend accompanied by varying levels of humidity.
+
+
+# Problem 2
+
+
+
+
+
+
 
 
 
