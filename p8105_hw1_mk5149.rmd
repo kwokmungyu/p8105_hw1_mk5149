@@ -52,6 +52,37 @@ Overall, the plot suggests a warming trend accompanied by varying levels of humi
 
 
 # Problem 2
+We first create 4 vectors:
+a numeric vector (10 random samples from the standard normal distribution),
+a logicala vector indicating whether elements of the sample are greater than 0,
+a character vector of length 10,
+a factor vector of length 10, with 3 different factor “levels”.
+```{r}
+# Create the numeric vector
+numeric_vec = rnorm(10)
+
+# Create the logical vector, TRUE if numeric_vec > 0
+logical_vec = numeric_vec > 0
+
+# Create the character vector
+character_vec = c("a","b","c","d","e","f","g","h","i","j")
+
+# Create the factor vector
+factor_vec = factor(c("low","medium","high","low","medium","high","low","medium","high","low"))
+```
+
+Then, we combine them into a dataframe.
+```{r}
+df = tibble(
+  numeric_vec,
+  logical_vec,
+  character_vec,
+  factor_vec
+)
+df
+```
+
+
 
 
 
