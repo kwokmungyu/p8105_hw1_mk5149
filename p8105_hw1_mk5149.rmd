@@ -23,7 +23,10 @@ nrow(early_january_weather)    # number of rows
 ncol(early_january_weather)    # number of columns
 mean(early_january_weather$temp, na.rm = TRUE)   # mean temperature
 ```
-
+The `early_january_weather` dataset contains `r nrow(early_january_weather)` rows and 
+`r ncol(early_january_weather)` columns.  
+Important variables include `origin`, `year`, `month`, `day`, `hour`, `temp`, `dewp`, `humid`, `wind_dir`, `wind_dir`, `wind_speed`, `wind_gust`, `precip`, `pressure`, `visib` and `time_hour`.  
+The mean temperature during this period was `r mean(early_january_weather$temp, na.rm = TRUE)` degrees Fahrenheit.
 
 
 
