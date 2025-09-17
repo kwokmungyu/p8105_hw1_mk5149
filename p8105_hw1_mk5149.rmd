@@ -89,7 +89,7 @@ mean(pull(df, logical_vec))     # works, TRUE = 1 and FALSE = 0
 mean(pull(df, character_vec))   # error, characters cannot be averaged
 mean(pull(df, factor_vec))      # error, factors are not directly numeric
 ```
-
+We can see that, the mean of the numeric vector works as expected. The mean of the logical vector also works, because R treats TRUE as 1 and FALSE as 0. However, the mean of the character and factor variables does not work, because they are numeric. 
 
 
 
