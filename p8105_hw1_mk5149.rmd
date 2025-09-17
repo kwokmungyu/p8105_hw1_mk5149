@@ -14,10 +14,12 @@ library(moderndive)
 
 # Problem 1
 ```{r}
+# Load the data
 data("early_january_weather")
 ```
 
 ```{r}
+# Get the information about the dataset
 names(early_january_weather)   # variable names
 nrow(early_january_weather)    # number of rows
 ncol(early_january_weather)    # number of columns
@@ -28,6 +30,21 @@ The `early_january_weather` dataset contains `r nrow(early_january_weather)` row
 Important variables include `origin`, `year`, `month`, `day`, `hour`, `temp`, `dewp`, `humid`, `wind_dir`, `wind_dir`, `wind_speed`, `wind_gust`, `precip`, `pressure`, `visib` and `time_hour`.  
 The mean temperature during this period was `r mean(early_january_weather$temp, na.rm = TRUE)` degrees Fahrenheit.
 
+```{r}
+# Generate the scatter plot
+scatter_temp_time <- ggplot(early_january_weather, 
+                           aes(x = time_hour, y = temp, color = humid)) + geom_point(size = 2) + 
+  labs(x = "Time (hour)", y = "Temperature", color = "Humidity") + theme_minimal()
+scatter_temp_time
+
+ggsave("scatter_temp_vs_time.png", scatter_temp_time, width = 7, height = 4)
+```
+The scatterplot shows the relationship between time (x-axis) and temperature (y-axis)
+in early January, with point color indicating humidity. Temperatures generally
+increased over the course of the two weeks, although fluctuations occurred within
+each day. Higher humidity values (lighter blue points) appear more often during
+periods of higher temperature, especially in the second week of January.
+Overall, the plot suggests a warming trend accompanied by varying levels of humidity.
 
 
 
