@@ -97,7 +97,7 @@ as.numeric(df$logical_vec)      # TRUE → 1, FALSE → 0
 as.numeric(df$character_vec)    # results in NA with a warning
 as.numeric(df$factor_vec)       # converts factor levels to 1, 2, 3
 ```
-
+We can see from the results that, logical values are naturally treated as 0 and 1, so the mean is meaningful; For factors, they are stored internally as integer, so coercion gives numbers, these numbers are codes, not the lables; And for characters, they cannot be meaningfully turned into numbers, so the result is NA.
 
 
 
