@@ -82,7 +82,13 @@ df = tibble(
 df
 ```
 
-
+Next, we attempt to calculate the mean of each variable.
+```{r}
+mean(pull(df, numeric_vec))     # works, numeric mean
+mean(pull(df, logical_vec))     # works, TRUE = 1 and FALSE = 0
+mean(pull(df, character_vec))   # error, characters cannot be averaged
+mean(pull(df, factor_vec))      # error, factors are not directly numeric
+```
 
 
 
